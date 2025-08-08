@@ -1,62 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeetMetric</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetMetric - Solved Counts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: rgba(0, 0, 0, 0.975);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+    .box {
+      background: rgba(255, 255, 255, 0.519);
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    input { padding: 8px; width: 200px; margin-right: 10px; }
+    button {
+      padding: 8px 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover { background: #0056b3; }
+  </style>
 </head>
 <body>
-    
-    <div class="container">
-        <!-- heading
-        user
-        stats -->
-        <h1>LeetMetric</h1>
+  <h1>LeetMetric: Solved Counts</h1>
+  <div>
+    <input type="text" id="username" placeholder="Enter LeetCode Username">
+    <button onclick="fetchSolvedCounts()">Fetch</button>
+  </div>
 
-        <div class="user-container">
-            <p>Enter your username below:</p>
-            <div class="user-input-container">
-                <input type="text" placeholder="enter your username here" id="user-input">
-                <button id="search-button">Search</button>
-            </div>
-        </div>
+  <div class="box" id="easy">Easy: -</div>
+  <div class="box" id="medium">Medium: -</div>
+  <div class="box" id="hard">Hard: -</div>
 
-        <div class="stats-container">
-            
-            <div class="progress">
-
-                <div class="progress-item">
-                    <div class="easy-progress circle">
-                        <span id="easy-label"></span>
-                        <p>Easy</p>
-                    </div>
-                </div>
-
-                <div class="progress-item ">
-                    <div class="medium-progress circle">
-                        <span id="medium-label"></span>
-                        <p>Medium</p>
-                    </div>
-                </div>
-
-                <div class="progress-item ">
-                    <div class="hard-progress circle">
-                        <span id="hard-label"></span>
-                        <p>Hard</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="stats-cards">
-                <!-- directly populate card here from the JS code -->
-            </div>
-
-        </div>
-
-    </div>
-
-    <script src="index.js"></script>
+  <script src="sc.js"></script>
 </body>
 </html>
+
